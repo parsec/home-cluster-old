@@ -1,9 +1,28 @@
----
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: cluster-settings
-  namespace: flux-system
+    name: cluster-settings
+    namespace: flux-system
 data:
-  METALLB_LB_RANGE: 10.117.0.50-10.117.0.100
-  METALLB_TRAEFIK_ADDR: 10.117.0.50
+    METALLB_LB_RANGE: ENC[AES256_GCM,data:L7h0hEfGWzY7FAuYb7Gr2XhpyZvP,iv:nYWS74gYMu7Qd9rkwndr/AISCdfol+3h9nx3eBe/u7s=,tag:pRF9HbOGavJ83JoJiSNdlQ==,type:str]
+    METALLB_TRAEFIK_ADDR: ENC[AES256_GCM,data:HaeLjLg475GiCw==,iv:vUPodAltwwBTjE2/2/RO64AmuSrAhdyn+93wJvsK5Ho=,tag:swKOoURvbLxnqEdCxdCdvw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1a3asqdrew0uw4cmqhzrl2n2x2rekw4y0caqd3z9susnpxsvxy3cqfcckew
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBqMXRlT3JzMnFjL0pTUG0y
+            T1BGZE96eWc1TUdMME5HUjBUUTNjS2l3TkRBClpXb2xYMGtwejMzRWFaTXdlYy8x
+            amFET3AyeWlUNTQ1djlUdEVHT1E0c2sKLS0tIGk2MHp5QStPQmhSOSs4QzEwMEly
+            Z2JGNThuNkhYQ2dsaTl6VGdQZHZidVUKDxBEaUywLZ3kn2wa6D18DWw9CrL0/Di5
+            EHNVNLugYJ3CGbBaGpjtQ71q0B+uKux5ySOLIOTkzjI1MwOwGwbllQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-01-25T23:35:38Z"
+    mac: ENC[AES256_GCM,data:Rn8z43jCinwPOZyJFleJF1sU9fEo1SOV6cfJoO0/xOj5PZiNI2DUFSWmRFVN1zNxwwfGKh2Jh2ZxvbwxEzHkgQ8/iXHo0XDN3/COJsrtOBwgHNBUEDfgv3aGrHRhLx3w7GIMB+DeZ7RQ6orCzMg7iQIgRzNrlBEQsXr0M3W+OgI=,iv:0mGhrUHBUpgyDBWnkJMnNmFJedf7vGD69s1lGrDmzx4=,tag:BStLxHfU0xNFjwowYsBmoQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.1
