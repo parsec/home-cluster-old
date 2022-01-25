@@ -4,7 +4,7 @@ metadata:
     name: cluster-settings
     namespace: flux-system
 data:
-    METALLB_LB_RANGE: ENC[AES256_GCM,data:L7h0hEfGWzY7FAuYb7Gr2XhpyZvP,iv:nYWS74gYMu7Qd9rkwndr/AISCdfol+3h9nx3eBe/u7s=,tag:pRF9HbOGavJ83JoJiSNdlQ==,type:str]
+    METALLB_LB_RANGE: ENC[AES256_GCM,data:5q8iUMYh8o8G3gFQacz5SqNVzTbm,iv:laGr0RiwH/YxxLN+DJi5/dGkxkBjGidpRRtDbMc6jeU=,tag:beqcRfNyzjlp6jbiGgN98A==,type:str]
     METALLB_TRAEFIK_ADDR: ENC[AES256_GCM,data:HaeLjLg475GiCw==,iv:vUPodAltwwBTjE2/2/RO64AmuSrAhdyn+93wJvsK5Ho=,tag:swKOoURvbLxnqEdCxdCdvw==,type:str]
 sops:
     kms: []
@@ -21,8 +21,8 @@ sops:
             Z2JGNThuNkhYQ2dsaTl6VGdQZHZidVUKDxBEaUywLZ3kn2wa6D18DWw9CrL0/Di5
             EHNVNLugYJ3CGbBaGpjtQ71q0B+uKux5ySOLIOTkzjI1MwOwGwbllQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-01-25T23:35:38Z"
-    mac: ENC[AES256_GCM,data:Rn8z43jCinwPOZyJFleJF1sU9fEo1SOV6cfJoO0/xOj5PZiNI2DUFSWmRFVN1zNxwwfGKh2Jh2ZxvbwxEzHkgQ8/iXHo0XDN3/COJsrtOBwgHNBUEDfgv3aGrHRhLx3w7GIMB+DeZ7RQ6orCzMg7iQIgRzNrlBEQsXr0M3W+OgI=,iv:0mGhrUHBUpgyDBWnkJMnNmFJedf7vGD69s1lGrDmzx4=,tag:BStLxHfU0xNFjwowYsBmoQ==,type:str]
+    lastmodified: "2022-01-25T23:38:20Z"
+    mac: ENC[AES256_GCM,data:mE7SDU0Hpi0Sq+9rIKP/iCxi7XdmiAkjEgw/kbpu71K4CGhAH6/7ZOdlnXKn++Ljapoxop8SDND9YwQPlSWHqtuhPFk9GdbkytHnWnySTGnmpx603BX2j6xfJfVnpp3JckmmknaMLOqG5o1jD85pdegUm9cLZcFYgjHFwTwrg/Y=,iv:RTkGliFmVJj0DpurjMdmJDhS3zunRWjwzKx2tLduNnc=,tag:dvGz3jnErj74ScQXQSdb+w==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.1
