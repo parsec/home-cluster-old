@@ -7,3 +7,4 @@ resources:
   - flux-system
   - networking
   - system-upgrade
+  - monitoring
