@@ -1,1 +1,2 @@
 *.sops.* diff=sopsdiffer
+encrypted/*.{yaml,json,ini,env} diff=sopsdiffer
