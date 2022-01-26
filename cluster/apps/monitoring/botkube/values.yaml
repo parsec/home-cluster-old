@@ -9,13 +9,13 @@ spec:
     communications:
       discord:
         enabled: true
-        token: ${BOTKUBE_TOKEN}
-        botid: ${BOTKUBE_BOTID}
-        channel: ${BOTKUBE_CHANNEL}
+        token: "${BOTKUBE_TOKEN}"
+        botid: "${BOTKUBE_BOTID}"
+        channel: "${BOTKUBE_CHANNEL}"
     serviceMonitor:
       enabled: false
     config:
-      recommendations: false
+      recommendations: true
       settings:
         clustername: artifice
       resources:
