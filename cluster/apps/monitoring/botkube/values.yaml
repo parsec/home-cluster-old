@@ -5,7 +5,7 @@ metadata:
   name: botkube
   namespace: monitoring
 spec:
-  values: 
+  values:
     communications:
       discord:
         enabled: true
