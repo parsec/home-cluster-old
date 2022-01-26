@@ -17,7 +17,7 @@ spec:
     config:
       recommendations: false
       settings:
-        clustername: monado
+        clustername: artifice
       resources:
       - name: v1/pods
         namespaces:
