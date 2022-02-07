@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: jenkins-ingress
+  name: jenkins
   namespace: jenkins
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
@@ -18,7 +18,7 @@ spec:
 
   tls:
     - hosts:
-        - https-jenkins.${SECRET_DOMAIN}
+        - https://jenkins.${SECRET_DOMAIN}
       secretName: jenkins-tls
 
   rules:
