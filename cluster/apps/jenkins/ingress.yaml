@@ -18,6 +18,7 @@ spec:
   tls:
     - hosts:
         - https-jenkins.${SECRET_DOMAIN}
+      secretName: jenkins-tls
 
   rules:
     - host: "jenkins.${SECRET_DOMAIN}"
