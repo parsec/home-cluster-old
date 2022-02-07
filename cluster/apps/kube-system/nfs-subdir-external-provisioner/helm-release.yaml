@@ -23,7 +23,7 @@ spec:
     replicaCount: 3
     nfs:
       server: "10.1.0.3"
-      path: "/mnt/PVCs"
+      path: "/mnt/Data/PVCs"
       mountOptions:
         - noatime
     storageClass:
