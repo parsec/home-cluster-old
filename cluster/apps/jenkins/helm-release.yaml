@@ -16,8 +16,7 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    jenkinsUser: ${JENKINS_USER}
-    jenkinsPassword: ${JENKINS_PASSWORD}
+    extraEnvVarsSecret: "jenkins"
 
     service:
       type: ClusterIP
