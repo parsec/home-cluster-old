@@ -11,3 +11,4 @@ resources:
   - monitoring.yaml
   - calico-system.yaml
   - rook-ceph.yaml
+  - jenkins.yaml
