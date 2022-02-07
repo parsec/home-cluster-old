@@ -19,6 +19,12 @@ spec:
     jenkinsUser: ${JENKINS_USER}
     jenkinsPassword: ${JENKINS_PASSWORD}
 
+    extraEnvVars:
+      - name: JENKINS_USER
+        value: ${JENKINS_USER}
+      - name: JENKINS_PASSWORD
+        value: ${JENKINS_PASSWORD}
+
     service:
       type: ClusterIP
 
