@@ -44,9 +44,9 @@ spec:
               - "jenkins.${SECRET_DOMAIN}"
             secretName: "jenkins-tls"
 
-      persistance:
-        enabled: true
-        storageClass: "managed-nfs-storage"
-        accessModes:
-          - ReadWriteOnce
-        size: 100Mi
+    persistance:
+      enabled: true
+      storageClass: "managed-nfs-storage"
+      accessModes:
+        - ReadWriteOnce
+      size: 100Mi
