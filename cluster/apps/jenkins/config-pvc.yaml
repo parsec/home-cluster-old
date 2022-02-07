@@ -5,7 +5,7 @@ metadata:
   name: jenkins-config
   namespace: jenkins
 spec:
-  storageClassName: managed-nfs-storage
+  storageClassName: nfs-client
   accessModes:
     - ReadWriteMany
   resources:
