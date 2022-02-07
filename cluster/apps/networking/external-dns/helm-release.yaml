@@ -36,9 +36,9 @@ spec:
       - --cloudflare-proxied
       - --annotation-filter=external-dns/is-public in (true)
     policy: sync
+    triggerLoopOnEvent: true
     sources:
       - ingress
-    txtPrefix: "k8s."
     domainFilters:
       - "${SECRET_DOMAIN}"
     resources:
