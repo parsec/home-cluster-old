@@ -26,32 +26,35 @@ spec:
         valueFrom:
           secretKeyRef:
             name: jenkins-secret
-            key: JENKINS_PASSWD
+            key: JENKINS_PASSWORD
+    envFrom:
+      - secretKeyRef:
+          name: jenkins-secret
 
     service:
       type: ClusterIP
-      port: 80
-      httpsPort: 443
 
     ingress:
-      enabled: true
-      ingressClassName: "traefik"
-      annotations:
-        cert-manager.io/cluster-issuer: "letsencrypt-production"
-        hajimari.io/enable: "true"
-        hajimari.io/icon: "code-tags-check"
-        hajimari.io/group: "Applications"
-        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-      hosts:
-        - host: "jenkins.${SECRET_DOMAIN}"
-          paths:
-            - path: /
-              pathType: Prefix
-      tls:
-        - hosts:
-            - "jenkins.${SECRET_DOMAIN}"
-          secretName: "jenkins-tls"
+      main:
+        enabled: true
+        ingressClassName: "traefik"
+        annotations:
+          cert-manager.io/cluster-issuer: "letsencrypt-production"
+          hajimari.io/enable: "true"
+          hajimari.io/icon: "code-tags-check"
+          hajimari.io/group: "Applications"
+          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+        hosts:
+          - host: "jenkins.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathType: Prefix
+        tls:
+          - hosts:
+              - "jenkins.${SECRET_DOMAIN}"
+            secretName: "jenkins-tls"
 
     persistance:
-      enabled: true
-      existingClaim: jenkins-config
+      config:
+        enabled: true
+        existingClaim: jenkins-config
