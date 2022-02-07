@@ -22,10 +22,11 @@ spec:
   rules:
     - host: "jenkins.${SECRET_DOMAIN}"
       http:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: jenkins
-              port:
-                number: 80
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: jenkins
+                port:
+                  number: 80
