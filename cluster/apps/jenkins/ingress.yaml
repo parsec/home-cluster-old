@@ -4,16 +4,17 @@ kind: Ingress
 metadata:
   name: jenkins-ingress
   namespace: jenkins
-  labels:
-    name: jenkins-ingress
-spec:
-  ingressClassName: "traefik"
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
     hajimari.io/enable: "true"
     hajimari.io/icon: "code-tags-check"
     hajimari.io/group: "Applications"
     raefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+  labels:
+    name: jenkins-ingress
+spec:
+  ingressClassName: "traefik"
+
   rules:
     - host: "jenkins.${SECRET_DOMAIN}"
       http:
