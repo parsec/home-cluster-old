@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - helm-release.yaml
   - jenkins-secret.sops.yaml
+  - config-pvc.yaml
