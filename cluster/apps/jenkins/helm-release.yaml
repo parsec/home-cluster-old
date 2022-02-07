@@ -28,8 +28,8 @@ spec:
             name: jenkins-secret
             key: JENKINS_PASSWORD
 
-    jenkinsUser: "$JENKINS_USER"
-    jenkinsPassword: "$JENKINS_PASSWORD"
+    jenkinsUser: "${JENKINS_USER}"
+    jenkinsPassword: "${JENKINS_PASSWORD}"
 
     service:
       type: ClusterIP
