@@ -17,19 +17,19 @@ spec:
       interval: 5m
   values:
     env:
-      - name: jenkinsUser
+      - name: JENKINS_USER
         valueFrom:
           secretKeyRef:
             name: jenkins-secret
             key: JENKINS_USER
-      - name: jenkinsPassword
+      - name: JENKINS_PASSWORD
         valueFrom:
           secretKeyRef:
             name: jenkins-secret
             key: JENKINS_PASSWORD
-    envFrom:
-      - secretKeyRef:
-          name: jenkins-secret
+
+    jenkinsUser: $JENKINS_USER
+    jenkinsPassword: $JENKINS_PASSWORD
 
     service:
       type: ClusterIP
