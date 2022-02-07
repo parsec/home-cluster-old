@@ -9,7 +9,8 @@ metadata:
     hajimari.io/enable: "true"
     hajimari.io/icon: "code-tags-check"
     hajimari.io/group: "Applications"
-    raefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+    traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+    external-dns.alpha.kubernetes.io/hostname: jenkins.parsec.sh
   labels:
     name: jenkins-ingress
 spec:
