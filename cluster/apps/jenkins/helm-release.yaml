@@ -17,7 +17,7 @@ spec:
       interval: 5m
   values:
     jenkinsUser: "${JENKINS_USER}"
-    jenkinsPassword: "${JENKINS_PASSWORD}"
+    jenkinsPassword: "${JENKINS_PASSWD}"
 
     service:
       type: ClusterIP
@@ -46,7 +46,4 @@ spec:
 
     persistance:
       enabled: true
-      storageClass: "managed-nfs-storage"
-      accessModes:
-        - ReadWriteOnce
-      size: 100Mi
+      existingClaim: jenkins-config

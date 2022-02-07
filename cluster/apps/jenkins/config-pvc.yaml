@@ -2,7 +2,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: jenkins
+  name: jenkins-config
 spec:
   storageClassName: managed-nfs-storage
   accessModes:
