@@ -7,3 +7,9 @@ tasks:
     cmds:
       - flux reconcile source git flux-system
     silent: true
+
+  reconcile:all:
+    desc: Reconcile all core Kustomizations
+    cmd:
+      - flux reconcile crds flux-system core apps
+    silent: true
