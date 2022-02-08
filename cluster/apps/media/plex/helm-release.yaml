@@ -18,9 +18,6 @@ spec:
   install:
     createNamespace: true
   values:
-    image:
-      repository: ghcr.io/k8s-at-home/plex
-      tag: v1.25.4.5487-648a8f9f9
     podSecurityContext:
       supplementalGroups:
         - 44
@@ -50,10 +47,25 @@ spec:
           - hosts:
               - plex.${SECRET_DOMAIN}
             secretName: plex-tls
+
+    addons:
+      additionalVolumeMounts:
+        - mountPath: /dev/dri
+          name: gpu
+
     persistence:
+      gpu:
+        enabled: true
+        mountPath: /dev/dri
+        accessMode: ReadWriteMany
+        type: hostPath
+        hostPath: /dev/dri
+        hostPathType: Directory
+
       config:
         enabled: true
         existingClaim: plex-config-v1
+
       media:
         enabled: true
         type: custom
@@ -63,10 +75,12 @@ spec:
             path: /mnt/Data/media
         mountPath: /media
         readOnly: false
+
       transcode:
         enabled: true
         type: emptyDir
         medium: Memory
+
     affinity:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:
