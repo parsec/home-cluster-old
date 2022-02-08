@@ -49,6 +49,7 @@ spec:
         tls:
           - hosts:
               - *host
+            secretName: plex-tls
     persistence:
       config:
         enabled: true
