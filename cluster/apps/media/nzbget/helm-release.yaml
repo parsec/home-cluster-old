@@ -21,7 +21,7 @@ spec:
     # Default values
     # https://github.com/k8s-at-home/charts/blob/master/charts/stable/nzbget/values.yaml
 
-    values:
+  values:
     ingress:
       main:
         enabled: true
