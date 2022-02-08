@@ -65,5 +65,5 @@ spec:
           nfs:
             server: "10.1.0.3"
             path: /mnt/Data/media/downloads
-          mountPath: /downloads
-          readOnly: false
+        mountPath: /downloads
+        readOnly: false
