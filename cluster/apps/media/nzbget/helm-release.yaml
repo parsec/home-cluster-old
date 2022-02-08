@@ -39,9 +39,9 @@ spec:
               - path: /
                 pathType: Prefix
         tls:
-          hosts:
-            - nzbget.${SECRET_DOMAIN}
-          secretName: nzbget-tls
+          - hosts:
+              - nzbget.${SECRET_DOMAIN}
+            secretName: nzbget-tls
 
     persistence:
       config:

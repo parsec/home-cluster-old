@@ -40,9 +40,9 @@ spec:
               - path: /
                 pathType: Prefix
         tls:
-          hosts:
-            - radarr.${SECRET_DOMAIN}
-          secretName: radarr-tls
+          - hosts:
+              - radarr.${SECRET_DOMAIN}
+            secretName: radarr-tls
 
     persistence:
       config:
