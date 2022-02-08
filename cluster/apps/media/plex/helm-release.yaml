@@ -25,7 +25,10 @@ spec:
         - 100
     service:
       main:
-        type: ClusterIP
+        type: LoadBalancer
+        externalIPs:
+          - "10.1.0.101"
+        externalTrafficPolicy: Local
     ingress:
       main:
         enabled: true
@@ -46,6 +49,7 @@ spec:
         tls:
           - hosts:
               - plex.${SECRET_DOMAIN}
+            secretName: plex-tlsS
 
     addons:
       additionalVolumeMounts:
