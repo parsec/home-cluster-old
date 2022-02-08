@@ -28,6 +28,10 @@ spec:
         type: LoadBalancer
         externalIPs:
           - "10.1.0.101"
+        ports:
+          http:
+            port: 1337
+            targetPort: 32400
         externalTrafficPolicy: Local
     ingress:
       main:
