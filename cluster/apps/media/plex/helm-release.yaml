@@ -31,7 +31,6 @@ spec:
         ports:
           http:
             port: 32400
-            nodePort: 1337
         externalTrafficPolicy: Local
     ingress:
       main:
@@ -50,6 +49,11 @@ spec:
             paths:
               - path: /
                 pathType: Prefix
+                backend:
+                  service:
+                    name: plex
+                    port:
+                      number: 32400
         tls:
           - hosts:
               - plex.${SECRET_DOMAIN}
