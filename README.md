@@ -12,7 +12,6 @@ _... managed with Flux, Renovate and GitHub Actions_ :robot:
 
 <div align="center">
 
-[![Discord](https://img.shields.io/discord/673534664354430999?style=for-the-badge&label=discord&logo=discord&logoColor=white)](https://discord.gg/k8s-at-home)
 [![k3s](https://img.shields.io/badge/k3s-v1.22.6-brightgreen?style=for-the-badge&logo=kubernetes&logoColor=white)](https://k3s.io/)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=for-the-badge)](https://github.com/pre-commit/pre-commit)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/parsec/home-cluster/Schedule%20-%20Renovate%20Helm%20Releases?label=renovate&logo=renovatebot&style=for-the-badge)](https://github.com/parsec/home-cluster/actions/workflows/renovate-schedule.yaml)
