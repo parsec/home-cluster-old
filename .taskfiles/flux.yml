@@ -11,5 +11,8 @@ tasks:
   reconcile:
     desc: Reconcile all core Kustomizations
     cmds:
-      - flux reconcile crds flux-system core apps
+      - flux reconcile kustomization crds
+      - flux reconcile kustomization flux-system
+      - flux reconcile kustomization core
+      - flux reconcile kustomization apps
     silent: true
