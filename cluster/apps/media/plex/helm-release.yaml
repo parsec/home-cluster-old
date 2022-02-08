@@ -42,13 +42,13 @@ spec:
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
 
         hosts:
-          - host: &host "plex.${SECRET_DOMAIN}"
+          - host: plex.${SECRET_DOMAIN}
             paths:
               - path: /
                 pathType: Prefix
         tls:
           - hosts:
-              - *host
+              - plex.${SECRET_DOMAIN}
             secretName: plex-tls
     persistence:
       config:
