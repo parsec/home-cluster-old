@@ -33,7 +33,7 @@ spec:
       enableCephfsDriver: false
       enableCephfsSnapshotter: false
     monitoring:
-      enabled: true
+      enabled: false
     resources:
       requests:
         cpu: 100m
