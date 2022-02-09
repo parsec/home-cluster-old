@@ -62,13 +62,13 @@ spec:
         nodes:
           - name: "aegis"
             devices:
-              - name: "nvme0n1"
+              - name: ""
           - name: "omega"
             devices:
-              - name: "sda"
+              - name: ""
           - name: "alpha"
             devices:
-              - name: "sda"
+              - name: ""
     cephBlockPools:
       - name: ceph-blockpool
         spec:
