@@ -58,3 +58,9 @@ spec:
             path: /mnt/Data/media
         mountPath: /media
         readOnly: false
+
+    resources:
+      requests:
+        memory: 250Mi
+        cpu: 500m
+      limits: 2000Mi

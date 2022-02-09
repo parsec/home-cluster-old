@@ -67,3 +67,9 @@ spec:
             path: /mnt/Data/media/downloads
         mountPath: /downloads
         readOnly: false
+
+    resources:
+      requests:
+        memory: 250Mi
+        cpu: 500m
+      limits: 2000Mi
