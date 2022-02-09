@@ -5,4 +5,4 @@ resources:
   - https://raw.githubusercontent.com/rancher/system-upgrade-controller/master/manifests/system-upgrade-controller.yaml
 images:
   - name: rancher/system-upgrade-controller
-    newTag: v0.8.0
+    newTag: v0.8.1
