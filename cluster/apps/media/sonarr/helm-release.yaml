@@ -21,6 +21,10 @@ spec:
   # https://github.com/k8s-at-home/charts/blob/master/charts/stable/sonarr/values.yaml
 
   values:
+    image:
+      repository: ghcr.io/k8s-at-home/sonarr-develop
+      tag: v3.0.6.1457
+
     ingress:
       main:
         enabled: true
