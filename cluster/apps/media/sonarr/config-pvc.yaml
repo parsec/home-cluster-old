@@ -1,13 +1,15 @@
 ---
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
   name: sonarr-config-v1
   namespace: media
+  labels:
+    kasten.io/backup-volume: "enabled"
 spec:
-  storageClassName: nfs-client
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 2Gi
+  storageClassName: ceph-block
