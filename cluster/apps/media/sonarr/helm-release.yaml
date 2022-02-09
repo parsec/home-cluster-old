@@ -16,8 +16,7 @@ spec:
         namespace: flux-system
   interval: 5m
   install:
-    remediation:
-      retries: 3
+    createNamespace: true
   # Default values
   # https://github.com/k8s-at-home/charts/blob/master/charts/stable/sonarr/values.yaml
 
