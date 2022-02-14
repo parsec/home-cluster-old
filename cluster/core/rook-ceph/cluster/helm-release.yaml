@@ -62,7 +62,7 @@ spec:
         nodes:
           - name: "aegis"
             devices:
-              - name: "/dev/sda"
+              - name: "sda"
     cephBlockPools:
       - name: ceph-blockpool
         spec:
