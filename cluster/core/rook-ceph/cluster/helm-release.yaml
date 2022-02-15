@@ -64,6 +64,8 @@ spec:
           - name: "aegis"
             devices:
               - name: "sda"
+                config:
+                  osdsPerDevice: "4"
     cephBlockPools:
       - name: ceph-blockpool
         spec:
