@@ -24,3 +24,4 @@ resources:
   - traefik-charts.yaml
   - weaveworks-kured-charts.yaml
   - jenkins-charts.yaml
+  - kasten-charts.yaml
