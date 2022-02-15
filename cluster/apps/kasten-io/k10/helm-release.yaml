@@ -58,3 +58,6 @@ spec:
         external-dns/is-public: "true"
     grafana:
       enabled: false
+    prometheus:
+      server:
+        enabled: false
