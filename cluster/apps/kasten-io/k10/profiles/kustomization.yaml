@@ -5,4 +5,3 @@ resources:
   - k10-backups-pvc.yaml
   - k10-disaster-recovery.yaml
   - media.yaml
-  - dev.yaml
