@@ -10,3 +10,4 @@ resources:
   - monitoring
   - media
   - jenkins
+  - kasten-io
