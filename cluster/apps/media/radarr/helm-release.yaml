@@ -21,8 +21,8 @@ spec:
     # Default values
     # https://github.com/k8s-at-home/charts/blob/master/charts/stable/radarr/values.yaml
   dependsOn:
-    - name: rook-ceph-cluster
-      namespace: rook-ceph
+    - name: radarr-config-v1
+      namespace: media
   values:
     image:
       repository: ghcr.io/k8s-at-home/radarr

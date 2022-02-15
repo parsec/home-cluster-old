@@ -20,8 +20,8 @@ spec:
   # Default values
   # https://github.com/k8s-at-home/charts/blob/master/charts/stable/sonarr/values.yaml
   dependsOn:
-    - name: rook-ceph-cluster
-      namespace: rook-ceph
+    - name: sonarr-config-v1
+      namespace: media
   values:
     image:
       repository: ghcr.io/k8s-at-home/sonarr-develop

@@ -17,8 +17,8 @@ spec:
         namespace: flux-system
       interval: 5m
   dependsOn:
-    - name: rook-ceph-cluster
-      namespace: rook-ceph
+    - name: jenkins-config-v1
+      namespace: jenkins
   values:
     jenkinsUser: ${JENKINS_USER}
     jenkinsPassword: ${JENKINS_PASSWORD}

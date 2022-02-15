@@ -19,8 +19,8 @@ spec:
   install:
     createNamespace: true
   dependsOn:
-    - name: rook-ceph-cluster
-      namespace: rook-ceph
+    - name: plex-config-v1
+      namespace: media
   values:
     podSecurityContext:
       supplementalGroups:

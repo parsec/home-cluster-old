@@ -21,8 +21,8 @@ spec:
     # Default values
     # https://github.com/k8s-at-home/charts/blob/master/charts/stable/nzbget/values.yaml
   dependsOn:
-    - name: rook-ceph-cluster
-      namespace: rook-ceph
+    - name: nzbget-config-v1
+      namespace: media
   values:
     ingress:
       main:

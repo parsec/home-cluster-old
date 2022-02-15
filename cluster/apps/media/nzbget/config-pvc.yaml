@@ -8,7 +8,7 @@ metadata:
     kasten.io/backup-volume: "enabled"
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi
