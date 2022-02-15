@@ -8,5 +8,4 @@ resources:
   - networking
   - system-upgrade
   - monitoring
-  - jenkins
   - media
