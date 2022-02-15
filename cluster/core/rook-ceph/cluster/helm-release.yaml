@@ -18,10 +18,10 @@ spec:
   install:
     createNamespace: true
     remediation:
-      retries: 3
+      retries: 5
   upgrade:
     remediation:
-      retries: 3
+      retries: 5
   dependsOn:
     - name: rook-ceph
       namespace: rook-ceph
@@ -65,7 +65,7 @@ spec:
             devices:
               - name: "sda"
                 config:
-                  osdsPerDevice: "4"
+                  osdsPerDevice: "2"
     cephBlockPools:
       - name: ceph-blockpool
         spec:

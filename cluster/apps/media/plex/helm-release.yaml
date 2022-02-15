@@ -18,6 +18,9 @@ spec:
       interval: 5m
   install:
     createNamespace: true
+  dependsOn:
+    - name: rook-ceph-cluster
+      namespace: rook-ceph
   values:
     podSecurityContext:
       supplementalGroups:

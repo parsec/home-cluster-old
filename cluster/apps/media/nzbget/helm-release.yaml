@@ -20,7 +20,9 @@ spec:
       retries: 3
     # Default values
     # https://github.com/k8s-at-home/charts/blob/master/charts/stable/nzbget/values.yaml
-
+  dependsOn:
+    - name: rook-ceph-cluster
+      namespace: rook-ceph
   values:
     ingress:
       main:
