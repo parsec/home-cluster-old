@@ -47,5 +47,14 @@ spec:
       tls:
         enabled: true
         secretName: "k10-tls"
+      annotations:
+        cert-manager.io/cluster-issuer: "letsencrypt-production"
+        hajimari.io/enable: "true"
+        hajimari.io/icon: "code-tags-check"
+        hajimari.io/group: "Applications"
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+        external-dns.alpha.kubernetes.io/hostname: k10.parsec.sh
+        external-dns.alpha.kubernetes.io/target: "ipv4.${SECRET_DOMAIN}"
+        external-dns/is-public: "true"
     grafana:
       enabled: false
