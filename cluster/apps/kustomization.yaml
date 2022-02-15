@@ -5,9 +5,10 @@ resources:
   - default
   - kube-system
   - flux-system
+  - kasten-io
   - networking
   - system-upgrade
   - monitoring
   - media
   - jenkins
-  - kasten-io
+  - rook-ceph
