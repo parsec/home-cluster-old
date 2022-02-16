@@ -18,9 +18,6 @@ spec:
       interval: 5m
   install:
     createNamespace: true
-  dependsOn:
-    - name: plex-config-v1
-      namespace: media
   values:
     podSecurityContext:
       supplementalGroups:
