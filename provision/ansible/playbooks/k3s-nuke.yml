@@ -30,3 +30,8 @@
         path: "{{ item.path }}"
         state: absent
       loop: "{{ files_to_delete.files }}"
+    - name: Delete ceph host directories
+      file:
+        state: absent
+        recurse: yes
+        path: /var/lib/rook
