@@ -33,6 +33,7 @@ spec:
     csi:
       enableCephfsDriver: false
       enableCephfsSnapshotter: false
+      enableCSIHostNetwork: true
     monitoring:
       enabled: true
     resources:

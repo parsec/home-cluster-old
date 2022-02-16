@@ -33,5 +33,4 @@
     - name: Delete ceph host directories
       file:
         state: absent
-        recurse: yes
         path: /var/lib/rook
