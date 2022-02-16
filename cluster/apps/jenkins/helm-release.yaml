@@ -32,4 +32,4 @@ spec:
     persistance:
       config:
         enabled: true
-        existingClaim: jenkins-config
+        existingClaim: jenkins-config-v1
