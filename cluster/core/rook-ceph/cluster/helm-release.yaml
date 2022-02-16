@@ -66,11 +66,6 @@ spec:
               - name: "sda"
                 config:
                   osdsPerDevice: "2"
-    cephBlockPoolsVolumeSnapshotClass:
-      enabled: true
-      name: csi-rbdplugin-snapclass
-      annotations:
-        k10.kasten.io/is-snapshot-class: "true"
     cephBlockPools:
       - name: ceph-blockpool
         spec:

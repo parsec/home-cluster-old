@@ -5,7 +5,7 @@ resources:
   - default
   - kube-system
   - flux-system
-  - kasten-io
+  # - kasten-io
   - networking
   - system-upgrade
   - monitoring
