@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - namespaces
   - cert-manager
+  - rook-ceph
   - kube-system
   - metallb-system
   - system-upgrade
-  - rook-ceph
