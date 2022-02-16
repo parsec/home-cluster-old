@@ -65,7 +65,7 @@ spec:
             devices:
               - name: "sda"
                 config:
-                  osdsPerDevice: "2"
+                  osdsPerDevice: "4"
     cephBlockPoolsVolumeSnapshotClass:
       enabled: true
       name: csi-rbdplugin-snapclass
