@@ -20,7 +20,7 @@ spec:
     createNamespace: true
   values:
     env:
-      PLEX_CLAIM: "claim-yKypM6cvxwXRVsvck1UV"
+    #  PLEX_CLAIM: "claim-yKypM6cvxwXRVsvck1UV"
       ALLOWED_NETWORKS: "10.0.0.1/255.0.0.0"
 
     podSecurityContext:
