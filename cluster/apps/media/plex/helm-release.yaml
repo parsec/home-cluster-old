@@ -23,7 +23,6 @@ spec:
       repository: ghcr.io/k8s-at-home/plex
       tag: v1.25.7.5604-980a13e02
     env:
-      PLEX_CLAIM: "claim-J-9x5CGJS-L5rg5j1X6x"
       ALLOWED_NETWORKS: "10.0.0.1/255.0.0.0"
     podSecurityContext:
       supplementalGroups:
