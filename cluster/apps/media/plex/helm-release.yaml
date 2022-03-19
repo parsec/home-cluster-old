@@ -19,6 +19,10 @@ spec:
   install:
     createNamespace: true
   values:
+    env:
+      PLEX_CLAIM: "claim-2DoQa4hHDT2MLEJRJN15"
+      ALLOWED_NETWORKS: "10.0.0.1/255.0.0.0"
+
     podSecurityContext:
       supplementalGroups:
         - 44
