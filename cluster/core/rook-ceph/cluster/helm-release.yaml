@@ -8,8 +8,9 @@ spec:
   interval: 5m
   chart:
     spec:
+      # renovate: registryUrl=https://charts.rook.io/release
       chart: rook-ceph-cluster
-      version: v1.8.4
+      version: v1.8.6
       sourceRef:
         kind: HelmRepository
         name: rook-ceph-charts
@@ -17,10 +18,10 @@ spec:
   install:
     createNamespace: true
     remediation:
-      retries: 3
+      retries: 5
   upgrade:
     remediation:
-      retries: 3
+      retries: 5
   dependsOn:
     - name: rook-ceph
       namespace: rook-ceph
@@ -62,19 +63,20 @@ spec:
         nodes:
           - name: "aegis"
             devices:
-              - name: ""
-          - name: "omega"
-            devices:
-              - name: ""
-          - name: "alpha"
-            devices:
-              - name: ""
+              - name: "sda"
+                config:
+                  osdsPerDevice: "4"
+    cephBlockPoolsVolumeSnapshotClass:
+      enabled: true
+      name: csi-rbdplugin-snapclass
+      annotations:
+        k10.kasten.io/is-snapshot-class: "true"
     cephBlockPools:
       - name: ceph-blockpool
         spec:
           failureDomain: host
           replicated:
-            size: 3
+            size: 1
         storageClass:
           enabled: true
           name: ceph-block

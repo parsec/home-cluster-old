@@ -1,0 +1,67 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: k10
+  namespace: kasten-io
+spec:
+  releaseName: k10
+  interval: 5m
+  chart:
+    spec:
+      # renovate: registryUrl=https://charts.kasten.io/
+      chart: k10
+      version: 4.5.10
+      sourceRef:
+        kind: HelmRepository
+        name: kasten-charts
+        namespace: flux-system
+      interval: 5m
+  install:
+    createNamespace: true
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  upgrade:
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  dependsOn:
+    - name: rook-ceph-cluster
+      namespace: rook-ceph
+  values:
+    eula:
+      accept: true
+      company: parsec
+      email: parsec@@users.noreply.github.com
+    global:
+      persistence:
+        storageClass: ceph-block
+    auth:
+      tokenAuth:
+        enabled: true
+    clusterName: k8s
+    ingress:
+      create: true
+      class: "traefik"
+      host: &host "k10.${SECRET_DOMAIN}"
+      urlPath: k10
+      hosts:
+        - *host
+      tls:
+        enabled: true
+        secretName: "k10-tls"
+      annotations:
+        cert-manager.io/cluster-issuer: "letsencrypt-production"
+        hajimari.io/enable: "true"
+        hajimari.io/icon: "code-tags-check"
+        hajimari.io/group: "Applications"
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+        external-dns.alpha.kubernetes.io/hostname: k10.parsec.sh
+        external-dns.alpha.kubernetes.io/target: "ipv4.${SECRET_DOMAIN}"
+        external-dns/is-public: "true"
+    grafana:
+      enabled: false
+    prometheus:
+      server:
+        enabled: false

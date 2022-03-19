@@ -1,13 +1,15 @@
 ---
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
-  name: jenkins-config
+  name: jenkins-config-v1
   namespace: jenkins
+  labels:
+    kasten.io/backup-volume: "enabled"
 spec:
-  storageClassName: nfs-client
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
-      storage: 100Mi
+      storage: 50Gi
+  storageClassName: ceph-block

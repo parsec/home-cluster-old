@@ -10,7 +10,7 @@ spec:
     spec:
       # renovate: registryUrl=https://charts.bitnami.com/bitnami
       chart: jenkins
-      version: v8.1.4
+      version: 9.0.5
       sourceRef:
         kind: HelmRepository
         name: bitnami-charts
@@ -32,4 +32,4 @@ spec:
     persistance:
       config:
         enabled: true
-        existingClaim: jenkins-config
+        existingClaim: jenkins-config-v1

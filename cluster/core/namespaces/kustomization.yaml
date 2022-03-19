@@ -12,3 +12,4 @@ resources:
   - calico-system.yaml
   - rook-ceph.yaml
   - jenkins.yaml
+  - kasten-io.yaml
