@@ -23,7 +23,7 @@ spec:
       repository: ghcr.io/k8s-at-home/plex
       tag: v1.25.7.5604-980a13e02
     env:
-      ALLOWED_NETWORKS: "10.0.0.1/255.0.0.0"
+      ALLOWED_NETWORKS: "10.1.0.0/255.255.255.0"
     podSecurityContext:
       supplementalGroups:
         - 44
