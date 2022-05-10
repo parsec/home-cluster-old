@@ -5,3 +5,4 @@ resources:
   - traefik
   - external-dns
   - external-snapshotter
+  - system-upgrade-controller
